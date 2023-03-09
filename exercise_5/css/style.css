@@ -67,3 +67,15 @@ div.right {
 div.clear {
     clear: both;
 }
+
+@media (max-width: 800px){
+    div.left{
+        width: 100%;
+        float: none;
+    }
+    div.right{
+        width: 100%;
+        float: none;
+    }
+}
+
