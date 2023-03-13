@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;;
+    width: 80%;
+    margin: auto;
+}
+
+/* Common */
+
+.flex {
+    display: flex;
+}
+
+.green {
+    color: #b8e985;
+}
+
+.blue {
+    color: #4b8fe2;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* Header */
+
+header{
+    margin-top: 2.75rem;
+    margin-bottom: 6.25rem;
+    flex-flow: column wrap;
+}
+
+header > div.about {
+    align-self: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 7.25rem;
+    font-weight: 300;
+}
+
+header > div.email {
+    margin-bottom: 6.25rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    align-self: end;
+}
+
+header > div > p.description {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #cecece;
+}
+
+/* Main Content */
+
+main > section.container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1.25rem;
+    margin-bottom: 6.25rem;
+}
+
+main > section.container > div {
+    width: 31.3%;
+}
+
+section > h2{
+    font-size: 2.125rem;
+    color: #cecece;
+    text-align: center;
+    margin-bottom: 3.75rem;
+}
+
+div.logo-container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+div.logo-container > div{
+    width: 10%;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 11.8rem;
+    margin-bottom: 6.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div.icons {
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+div.icons > div {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3.75rem;
+}
+
+div.line {
+    display: inline-block;
+    border-bottom: 1px solid #cecece;
+}
+
+div.line:first-child {
+    width: 1.5rem;
+}
+
+div.line:last-child {
+    width: 9.375rem;
+}
+
+footer > div:first-child {
+    /* gap: 1.5rem; */
+    margin-bottom: 4.5rem;
+}
+
+div.lines{
+    gap: 1.5rem;
+}
+
+footer > p{
+    font-size: 1rem;
+}
+
+
+@media (max-width: 800px) {
+
+    body {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 3.625rem;
+    }
+
+    header {
+        margin-top: 14rem;
+        flex-direction: column-reverse;
+    }
+
+    header > div.email {
+        margin-bottom: 6.25rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        align-self: center;
+    }
+
+    p.description {
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    main > section.container > div {
+        width: 100%;
+    }
+
+    div.logo-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 50px;
+        row-gap: 50px;
+    }
+    
+    .logo-container > div {
+        flex: 0 0 30%;
+        /* width: 40%; */
+    }
+
+    footer {
+        margin-top: 8rem;
+    }
+
+    footer > p {
+        font-size: 1.5rem;
+    }
+}
