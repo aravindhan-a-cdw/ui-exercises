@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <style>
+        *{
+            border: 1px dashed burlywood;
+        }
+
+        div > div:first-child {
+            background-color: rebeccapurple;
+        }
+
+        div > div:nth-child(2){
+            background-color: brown;
+        }
+        div > div:last-child {
+            background-color: aquamarine;
+        }
+
+        .div1{
+            position: absolute;
+        }
+
+        .div2{
+            position: relative;
+            /* margin-left: 200px; */
+            /* margin-top: -5px; */
+            /* z-index: -3; */
+        }
+        .div3{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relative</h1>
+    <div>
+        <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <style>
+        *{
+            border: 1px dashed burlywood;
+        }
+
+        body{
+            border: 1px solid blue;
+        }
+
+        div {
+            position: absolute;
+        }
+
+        div > div:first-child {
+            background-color: rebeccapurple;
+        }
+
+        div > div:nth-child(2){
+            background-color: brown;
+        }
+        div > div:last-child {
+            background-color: aquamarine;
+        }
+
+        .div2{
+            /* top: 2px; */
+            margin-left: 50px;
+            /* margin-top: 2px; */
+            /* top: 0px; */
+            /* margin-left: 200px; */
+            /* margin-top: -5px; */
+            /* z-index: -3; */
+        }
+        .div3{
+            left: 59px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Absolute</h1> -->
+    <div class="div1">Div 1</div>
+    <div class="div2">Div 2</div>
+    <div class="div3">Div 3</div>
+</body>
+</html>
