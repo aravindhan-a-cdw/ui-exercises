@@ -1,5 +1,14 @@
 ## CSS
-- 
+- Float
+    - Float must be `clear`ed in the same parent to apply or let the childs inherit the parent styling like background-color.
+    - When a container is floated then it must be cleared before before ending of the parent container. 
+        ```html
+        <div>
+            <div class="float"></div>
+            <div class="float"></div>
+            <div class="clear"></div>
+        </div>
+        ```
 
 
 ### Background Image
