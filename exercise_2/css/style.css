@@ -1,0 +1,141 @@
+*{
+    /* Many components have margin by default, so to remove it */
+    margin: 0;
+    /* Some elements like li will have padding */
+    padding: 0;
+    /* To make all elements adjust its size along with border and padding to fix the size of the element */
+    box-sizing: border-box;
+}
+
+img{
+    /* If image is smaller than the container then it should not be pixelated or big images should not overflow the container
+        hence we use this to prevent the both. Either fill the container or show its 100% size.
+    */
+    max-width: 100%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1 {
+    font-size: 46px;
+}
+
+
+header div:first-child {
+    background-color: #42133e;
+    color: white;
+    text-align: center;
+    padding: 3.625rem 0;
+}
+
+header div:last-child {
+    height: 100vh;
+    background: url("../images/cover.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+header img{
+    height: 100%;
+}
+
+main{
+    margin-top: 5.625rem;
+}
+
+div.row {
+    width: 87%;
+    margin: auto;
+}
+
+div.row:first-child {
+    margin-bottom: 5.375rem;
+}
+
+div.image-container {
+    width: 100%;
+}
+
+div.image-container > img {
+    width: 100%;
+}
+
+article {
+    display: inline-block;
+    width: 32%;
+}
+
+div.row article:not(article:last-child) {
+    margin-right: 24px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 36px;
+    margin-top: 18px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+article > p.content {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 20px;
+    width: 460px;
+    letter-spacing: 0.8px;
+}
+
+article > button {
+    padding: 12px 28px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #7a1655;
+    border: none;
+    color: #efe2e9;
+}
+
+section {
+    margin-top: 8.25rem;
+}
+
+section h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #7a1655;
+    text-align: center;
+    margin-bottom: 3.25rem;
+}
+
+
+section > p {
+    width: 80%;
+    margin: auto;
+    font-weight: 300;
+    font-size: 1.625rem;
+    line-height: 2.8rem;
+    letter-spacing: 1px;
+}
+
+footer {
+    margin-top: 6rem;
+    padding: 2rem 0 1.875rem;
+    background-color: #7a1655;
+    color: #fff;
+}
+
+footer div {
+    width: 87%;
+    margin: auto;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
