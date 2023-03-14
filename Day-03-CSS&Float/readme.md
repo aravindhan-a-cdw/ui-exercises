@@ -85,10 +85,10 @@ Explore
 - em, rem 
 - initial inherit
 - hex 3 digit vs 6 digit
-- font required argument in shorthand
+- font required argument in shorthand - Font size and font family are required, font family must be the last argument
 - how to align left and right in block level element
     - A inline element can be aligned using align (html) or text-align (css - aligns the content)
     - A block level element can be centered using margin auto.
 - Pseudo Element - before, after
-- type-of, nth-type-of selectors.
+- type-of, nth-type-of selectors
 - css-diner
