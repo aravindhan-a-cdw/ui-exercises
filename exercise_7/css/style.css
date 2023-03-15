@@ -10,14 +10,9 @@ img {
 }
 
 body {
-    font-size: 16px;
-}
-
-body {
     background-color: black;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
-    width: 80%;
     margin: auto;
 }
 
@@ -36,18 +31,26 @@ body {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 700;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.margin-auto {
+    margin: auto;
 }
 
 /* Header */
 
-header {
+#header-container {
     margin-top: 4.25rem;
     margin-bottom: 10rem;
     flex-flow: column wrap;
 }
 
-header>div.about {
+#about {
     align-self: center;
     text-align: center;
 }
@@ -57,14 +60,14 @@ h1 {
     font-weight: 300;
 }
 
-header>div.email {
+#email {
     margin-bottom: 7.65rem;
     font-size: 1.8rem;
     font-weight: 700;
     align-self: end;
 }
 
-header>div>p.description {
+#description {
     font-size: 3.3rem;
     letter-spacing: 2px;
     font-weight: 700;
@@ -74,37 +77,38 @@ header>div>p.description {
 
 /* Main Content */
 
-main>section.container {
+#products {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* row-gap: 1.25rem; */
     gap: 2.125rem;
     margin-bottom: 9.5rem;
+    width: 79%;
 }
 
-section.container > div {
-    flex-basis: 31.6%;
+#products > div {
+    flex-basis: 31.666%;
 }
 
-section>h2 {
+h2 {
     font-size: 3.3rem;
     color: #cecece;
     text-align: center;
     margin-bottom: 6rem;
 }
 
-div.logo-container {
-    justify-content: space-between;
+#logo-container {
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 2rem;
-    column-gap: 7rem;
+    justify-content: center;
+    /* padding: 0 2rem; */
+    column-gap: 8rem;
 }
 
 
 /* Footer */
 
-footer {
+#footer-container {
     margin-top: 17.625rem;
     margin-bottom: 6.75rem;
     flex-direction: column;
@@ -112,14 +116,14 @@ footer {
     align-items: center;
 }
 
-footer>div.icons {
+#icons {
     justify-content: space-evenly;
     align-items: center;
     column-gap: 1.3rem;
     margin-bottom: 5.625rem;
 }
 
-div.icons>div {
+#icons>div {
     width: 3.2rem;
     height: 3.2rem;
     border: 1px solid white;
@@ -128,9 +132,13 @@ div.icons>div {
     justify-content: center;
 }
 
+#lines {
+    gap: 2.25rem;
+    margin-bottom: 6.875rem;
+}
+
 div.line {
-    display: inline-block;
-    border-bottom: 1px solid #cecece;
+    border-bottom: 2px solid #fff;
 }
 
 div.line:first-child {
@@ -141,103 +149,162 @@ div.line:last-child {
     width: 14rem;
 }
 
-footer>div:first-child {
-    /* gap: 1.5rem; */
-    margin-bottom: 6.875rem;
-}
-
-div.lines {
-    gap: 2.25rem;
-}
-
-footer>p {
+#footer-container > p {
     font-size: 1.5rem;
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
-    body {
+    /* Header */
+
+    #header-container {
+        margin-top: 32vh;
+        margin-bottom: 6rem;
+        flex-direction: column-reverse;
         width: 90%;
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
+        letter-spacing: .2rem;
     }
 
-    header > div > p.description {
-        font-size: 2.3rem;
-        margin-top: 2rem;
+    #description {
+        font-size: 1.8rem;
+        margin: 1rem 0 .5rem 0;
     }
 
-    header {
-        margin-top: 22rem;
-        margin-bottom: 4rem;
-        flex-direction: column-reverse;
-    }
-
-    header>div.email {
-        margin-bottom: 6.25rem;
-        font-size: 1.5rem;
+    #email {
+        margin-bottom: 0;
+        font-size: 1rem;
         font-weight: 700;
         align-self: center;
     }
 
-    p.description {
-        margin-top: 1rem;
-        margin-bottom: 0.8rem;
+    /* Products Section */
+
+    #products {
+        flex-flow: column wrap;
+        width: 90%;
+        margin-bottom: 4rem;
     }
 
-    .container {
-        flex-direction: column;
+    /* Logos Section */
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 4rem;
     }
 
-    main>section.container>div {
-        width: 100%;
-    }
-
-    div.logo-container {
+    #logo-container {
         flex-wrap: wrap;
         justify-content: space-around;
-        column-gap: 50px;
-        row-gap: 50px;
+        row-gap: 5rem;
+        column-gap: 5rem;
     }
 
-    .logo-container>div {
+    #logo-container>div {
         flex: 0 0 30%;
+        /* max-height: 30%; */
         /* width: 40%; */
     }
 
-    main>section.container {
+    #logo-container img {
+        max-height: 60px;
+    }
+
+    /* main>section.container {
         margin-bottom: 7.5rem;
+    } */
+
+    /* Footer */
+
+    #footer-container {
+        margin-top: 10rem;
+        row-gap: 4.5rem;
+        width: 90%;
     }
 
-    div.logo-container {
-        gap: 7rem;
+    div.line:first-child {
+        width: 1.5rem;
+    }
+    
+    div.line:last-child {
+        width: 8rem;
     }
 
-    footer {
-        margin-top: 16rem;
+    #lines, #icons {
+        /* margin-bottom: 4.5rem; */
+        margin-bottom: 0;
     }
 
-    .icons > div > i {
-        font-size: 3rem;
+    #icons {
+        height: 30%;
+        gap: 2rem;
     }
 
-    div.icons>div {
-        width: 5rem;
-        height: 5rem;
+    #icons i {
+        font-size: 2rem;
+    }
+
+    #icons div:has(i) {
+        width: 3rem;
+        height: 3rem;
+        /* height: 4.5rem; */
         border: 1px solid white;
         border-radius: 50%;
         align-items: center;
         justify-content: center;
     }
 
-    footer>div.icons {
-        column-gap: 2rem;
+    #footer-container > p {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    div.line:first-child {
+        width: 1rem;
+    }
+    
+    div.line:last-child {
+        width: 6rem;
     }
 
-    footer>p {
-        font-size: 2.5rem;
+    #icons i {
+        font-size: 1.5rem;
+    }
+
+    #icons div:has(i) {
+        width: 2.5rem;
+        height: 2.5rem;
+        /* height: 4.5rem; */
+        border: 1px solid white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #footer-container > p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    #icons i {
+        font-size: 1rem;
+    }
+
+    #icons div:has(i) {
+        width: 2rem;
+        height: 2rem;
+        /* height: 4.5rem; */
+        border: 1px solid white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
     }
 }
