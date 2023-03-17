@@ -27,7 +27,7 @@ header div:first-child {
     background-color: #42133e;
     color: white;
     text-align: center;
-    padding: 3.625rem 0;
+    padding: 3rem 0;
 }
 
 header div:last-child {
@@ -44,20 +44,20 @@ main{
     margin-top: 5.625rem;
 }
 
-div.row {
+.row {
     width: 87%;
     margin: auto;
 }
 
-div.row:first-child {
+.row:first-child {
     margin-bottom: 5.375rem;
 }
 
-div.image-container {
+.image-container {
     width: 100%;
 }
 
-div.image-container > img {
+.image-container > img {
     width: 100%;
 }
 
@@ -67,33 +67,32 @@ article {
 }
 
 div.row article:not(article:last-child) {
-    margin-right: 24px;
+    margin-right: 1.5rem;
 }
 
 h3 {
     font-weight: 300;
-    font-size: 36px;
-    margin-top: 18px;
+    font-size: 2.25rem;
+    margin-top: 1.125rem;
 }
 
 h4 {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    font-size: 1.125rem;
+    margin: 0.625rem 0 1.875rem;
 }
 
-article > p.content {
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 24px;
-    margin-bottom: 20px;
-    width: 460px;
-    letter-spacing: 0.8px;
+.content {
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 1.25rem;
+    width: 28.75rem;
+    letter-spacing: 0.05rem;
 }
 
 article > button {
-    padding: 12px 28px;
-    font-size: 18px;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.125rem;
     text-transform: uppercase;
     background: #7a1655;
     border: none;
@@ -109,22 +108,23 @@ section h2 {
     font-weight: 300;
     color: #7a1655;
     text-align: center;
-    margin-bottom: 3.25rem;
+    margin-bottom: 3rem;
 }
 
 
 section > p {
-    width: 80%;
+    width: 75%;
     margin: auto;
     font-weight: 300;
     font-size: 1.625rem;
     line-height: 2.8rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
+    text-align: justify;
 }
 
 footer {
     margin-top: 6rem;
-    padding: 2rem 0 1.875rem;
+    padding: 1rem 0 1.875rem;
     background-color: #7a1655;
     color: #fff;
 }
