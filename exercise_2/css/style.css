@@ -53,10 +53,6 @@ main{
     margin-bottom: 5.375rem;
 }
 
-.image-container {
-    width: 100%;
-}
-
 .image-container > img {
     width: 100%;
 }
