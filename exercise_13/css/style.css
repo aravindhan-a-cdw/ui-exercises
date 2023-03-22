@@ -65,12 +65,13 @@ main {
 
 .contact-container {
     padding-bottom: 0.875rem;
+    padding-left: 0.875rem;
     flex: 1 1 33.3333%;
 }
 
-.contact-container:not(:nth-child(3n)) {
+/* .contact-container:not(:nth-child(3n)) {
     padding: 0 0.875rem 0.875rem 0;
-}
+} */
 
 .contact {
     background-color: #4c67b4;

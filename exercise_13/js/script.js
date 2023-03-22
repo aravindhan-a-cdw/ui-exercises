@@ -1,10 +1,7 @@
 
 import data from '../data/friends.json' assert {type: 'json'}
 
-console.log(data)
-
-
-
+// console.log(data)
 function getContactCardNode({first_name, last_name, email, img}) {
     let fullName = first_name + ' ' + last_name;
 
