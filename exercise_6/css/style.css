@@ -70,7 +70,10 @@ header {
     display: block;
 }
 
-#connector:hover~#menu {
+#connector:hover~#menu, 
+#round:hover~div, /* Make the connector and menu visible so that they can be hovered */
+#menu:hover
+{
     display: block;
 }
 
@@ -83,11 +86,6 @@ header {
     position: absolute;
     left: -44px;
     top: -16px;
-}
-
-#round:hover~div {
-    /* Make the connector and menu visible so that they can be hovered */
-    display: block;
 }
 
 div:has(#menu) {
@@ -103,10 +101,6 @@ div:has(#menu) {
     left: -240px;
     z-index: 1;
     display: none;
-}
-
-#menu:hover {
-    display: block;
 }
 
 nav > ul {
@@ -134,20 +128,17 @@ nav > ul > li > a:hover {
 /* Main */
 
 main {
-    width: 83.5%;
+    width: 85%;
     margin: auto;
-}
-
-.row {
-    margin-top: 3.25rem;
 }
 
 .product {
     display: inline-block;
+    margin-top: 3.25rem;
 }
 
-.product:not(:last-child) {
-    margin: 0 2.8rem 0rem 0;
+.product:not(:nth-child(4n)) {
+    margin-right: 3.125rem;
 }
 
 .star-icon {
@@ -161,15 +152,14 @@ main {
 
 .star-icon>i:hover {
     font-weight: 900;
+    cursor: pointer;
 }
 
 .image-container {
     background-color: #24252a;
     width: 20.25rem;
     height: 25.7rem;
-
     margin-bottom: 1rem;
-
     position: relative;
 }
 
@@ -226,7 +216,7 @@ main {
     margin-bottom: .75rem;
 }
 
-.description>button {
+.add-to-cart-btn {
     background: none;
     font-size: 1rem;
     font-weight: 600;
@@ -236,9 +226,10 @@ main {
     padding: 0.65rem 1.125rem;
 }
 
-.description>button:hover {
+.add-to-cart-btn:hover {
     color: #2a2b30;
     background-color: #969697;
+    cursor: pointer;
 }
 
 /* Footer Styles */
