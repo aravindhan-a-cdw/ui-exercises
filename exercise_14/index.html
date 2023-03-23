@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Payment Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        <header>
+            <!-- Company Logo -->
+            <div class="image-container">
+                <img src="images/Sirius_CDW.svg" alt="Sirius_CDW Logo">
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <form onsubmit="return formValidate();" novalidate>
+                    <div id="form-container" class="flex flex-column">
+                        <h2>Billing Details</h2>
+                        <div class="flex gap-20">
+                            <div class="flex flex-column flex-50">
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="first-name" id="first-name">
+                            </div>
+                            <div class="flex flex-column flex-50">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name" id="last-name">
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="flex flex-column">
+                            <label for="contact">Contact Number</label>
+                            <input type="tel" name="contact" id="contact">
+                        </div>
+                        <div class="flex flex-column">
+                            <label for="pincode">Pincode</label>
+                            <input type="number" name="pincode" id="pincode" class="remove-arrow">
+                        </div>
+                        <h2>Payment Details</h2>
+                        <div class="flex flex-column">
+                            <label for="card-number">Card Number</label>
+                            <input type="number" name="card-number" id="card-number" class="remove-arrow">
+                        </div>
+                        <div class="flex gap-20">
+                            <div class="flex flex-column flex-50">
+                                <label for="card-expiry">Card Expiry (Year)</label>
+                                <input type="number" name="card-expiry" id="card-expiry" class="remove-arrow">
+                            </div>
+                            <div class="flex flex-column flex-50">
+                                <label for="cvv">CVV</label>
+                                <input type="number" name="cvv" id="cvv" class="remove-arrow">
+                            </div>
+                        </div>
+                        <div class="flex flex-column">
+                            <button type="submit">Complete Payment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
