@@ -73,6 +73,7 @@ main {
     margin-top: -3rem;
 }
 
+/* Form Styles Start */
 #form-container {
     display: flex;
     justify-content: center;
@@ -100,10 +101,6 @@ button, input {
     border-radius: .3rem;
 }
 
-button{
-    padding: 1rem 0;
-}
-
 input {
     height: 2.625rem;
     border: 1px solid #D9D9D9;
@@ -116,10 +113,12 @@ button {
     border: none;
     flex: 1 1 100%;
     text-transform: uppercase;
+    padding: 1rem 0;
 }
 
 button:hover {
     background-color: #05299f;
+    cursor: pointer;
 }
 
 input:hover {
@@ -136,26 +135,30 @@ input:hover {
     border-color: #A80000;
 }
 
+/* Form Styles End */
+
+/* Animation */
+
 .animation {
-    animation: shake .2s;
+    animation: shake .1s;
 }
 
 
 @keyframes shake {
     0% {
-        transform: translateX(3px);
+        transform: translateX(2px);
     }
 
     25% {
-        transform: translateX(-3px);
+        transform: translateX(-2px);
     }
 
     50% {
-        transform: translateX(3px);
+        transform: translateX(2px);
     }
 
     75% {
-        transform: translateX(-3px);
+        transform: translateX(-2px);
     }
 
     100% {
