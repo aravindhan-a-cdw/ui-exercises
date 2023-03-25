@@ -15,13 +15,13 @@ const fields = {
     "first-name": {
         name: "First Name",
         required: true,
-        regex: "^[a-zA-z]{1,30}$",
+        regex: "^[a-zA-Z]{1,30}$",
         // message: "This is a custom message"
     },
     "last-name": {
         name: "Last Name",
         required: true,
-        regex: "^[a-zA-z]{1,30}$"
+        regex: "^[a-zA-Z]{1,30}$"
     },
     "email": {
         name: "Email Address",
