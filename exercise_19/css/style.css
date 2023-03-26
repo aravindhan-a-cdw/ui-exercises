@@ -1,314 +1,259 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 img {
-    /* Image will either fit the container or will be in true width if image is smaller! */
-    max-width: 100%;
+  /* Image will either fit the container or will be in true width if image is smaller! */
+  max-width: 100%;
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: auto;
+  background-color: black;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: auto;
 }
 
 /* Common */
-
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .green {
-    color: #b8e985;
+  color: #b8e985;
 }
 
 .blue {
-    color: #4b8fe2;
+  color: #4b8fe2;
 }
 
 .bold {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .width-80 {
-    width: 80%;
+  width: 80%;
 }
 
 .margin-auto {
-    margin: auto;
+  margin: auto;
+}
+
+.align-center, #icons > div, #icons, #footer-container, #logo-container, #products {
+  align-items: center;
+}
+
+.justify-center, #icons > div, #footer-container, #logo-container {
+  justify-content: center;
 }
 
 /* Header */
-
 #header-container {
-    margin-top: 4.25rem;
-    margin-bottom: 10rem;
-    flex-flow: column wrap;
+  margin-top: 4.25rem;
+  margin-bottom: 10rem;
+  flex-flow: column wrap;
 }
 
 #about {
-    align-self: center;
-    text-align: center;
+  align-self: center;
+  text-align: center;
 }
 
 h1 {
-    font-size: 10.8rem;
-    font-weight: 300;
+  font-size: 10.8rem;
+  font-weight: 300;
 }
 
 #email {
-    margin-bottom: 7.65rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    align-self: end;
+  margin-bottom: 7.65rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  align-self: end;
 }
 
 #description {
-    font-size: 3.3rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: #cecece;
-    margin-top: 0.7rem;
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #cecece;
+  margin-top: 0.7rem;
 }
 
 /* Main Content */
-
 #products {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.125rem;
-    margin-bottom: 9.5rem;
-    width: 79%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.125rem;
+  margin-bottom: 9.5rem;
+  width: 79%;
 }
-
 #products > div {
-    flex-basis: 31.666%;
+  flex-basis: 31.666%;
 }
 
 h2 {
-    font-size: 3.3rem;
-    color: #cecece;
-    text-align: center;
-    margin-bottom: 6rem;
+  font-size: 3.3rem;
+  color: #cecece;
+  text-align: center;
+  margin-bottom: 6rem;
 }
 
 #logo-container {
-    justify-content: space-evenly;
-    align-items: center;
-    justify-content: center;
-    /* padding: 0 2rem; */
-    column-gap: 8rem;
+  justify-content: space-evenly;
+  column-gap: 8rem;
 }
 
-
 /* Footer */
-
 #footer-container {
-    margin-top: 17.625rem;
-    margin-bottom: 6.75rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-top: 17.625rem;
+  margin-bottom: 6.75rem;
+  flex-direction: column;
+}
+#footer-container > p {
+  font-size: 1.5rem;
 }
 
 #icons {
-    justify-content: space-evenly;
-    align-items: center;
-    column-gap: 1.3rem;
-    margin-bottom: 5.625rem;
+  justify-content: space-evenly;
+  column-gap: 1.3rem;
+  margin-bottom: 5.625rem;
 }
-
-#icons>div {
-    width: 3.2rem;
-    height: 3.2rem;
-    border: 1px solid white;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+#icons > div {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
 #lines {
-    gap: 2.25rem;
-    margin-bottom: 6.875rem;
+  gap: 2.25rem;
+  margin-bottom: 6.875rem;
 }
-
-div.line {
-    border-bottom: 2px solid #fff;
+#lines.line {
+  border-bottom: 2px solid #fff;
 }
-
-div.line:first-child {
-    width: 2rem;
+#lines.line:first-child {
+  width: 2rem;
 }
-
-div.line:last-child {
-    width: 14rem;
+#lines.line:last-child {
+  width: 14rem;
 }
-
-#footer-container > p {
-    font-size: 1.5rem;
-}
-
 
 @media (max-width: 768px) {
-
-    /* Header */
-
-    #header-container {
-        margin-top: 32vh;
-        margin-bottom: 6rem;
-        flex-direction: column-reverse;
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 3rem;
-        letter-spacing: .2rem;
-    }
-
-    #description {
-        font-size: 1.8rem;
-        margin: 1rem 0 .5rem 0;
-    }
-
-    #email {
-        margin-bottom: 0;
-        font-size: 1rem;
-        font-weight: 700;
-        align-self: center;
-    }
-
-    /* Products Section */
-
-    #products {
-        flex-flow: column wrap;
-        width: 90%;
-        margin-bottom: 4rem;
-    }
-
-    /* Logos Section */
-
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 4rem;
-    }
-
-    #logo-container {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        row-gap: 5rem;
-        column-gap: 5rem;
-    }
-
-    #logo-container>div {
-        flex: 0 0 30%;
-        /* max-height: 30%; */
-        /* width: 40%; */
-    }
-
-    #logo-container img {
-        max-height: 60px;
-    }
-
-    /* main>section.container {
-        margin-bottom: 7.5rem;
-    } */
-
-    /* Footer */
-
-    #footer-container {
-        margin-top: 10rem;
-        row-gap: 4.5rem;
-        width: 90%;
-    }
-
-    div.line:first-child {
-        width: 1.5rem;
-    }
-    
-    div.line:last-child {
-        width: 8rem;
-    }
-
-    #lines, #icons {
-        /* margin-bottom: 4.5rem; */
-        margin-bottom: 0;
-    }
-
-    #icons {
-        height: 30%;
-        gap: 2rem;
-    }
-
-    #icons i {
-        font-size: 2rem;
-    }
-
-    #icons div:has(i) {
-        width: 3rem;
-        height: 3rem;
-        /* height: 4.5rem; */
-        border: 1px solid white;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footer-container > p {
-        font-size: 1.5rem;
-    }
+  /* Header */
+  #header-container {
+    margin-top: 32vh;
+    margin-bottom: 6rem;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+  #description {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+  #email {
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    align-self: center;
+  }
+  /* Products Section */
+  #products {
+    flex-flow: column wrap;
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+  /* Logos Section */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+  }
+  #logo-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 5rem;
+    column-gap: 5rem;
+  }
+  #logo-container > div {
+    flex: 0 0 30%;
+  }
+  #logo-container img {
+    max-height: 60px;
+  }
+  /* main>section.container {
+      margin-bottom: 7.5rem;
+  } */
+  /* Footer */
+  #footer-container {
+    margin-top: 10rem;
+    row-gap: 4.5rem;
+    width: 90%;
+  }
+  #footer-container > p {
+    font-size: 1.5rem;
+  }
+  .line:first-child {
+    width: 1.5rem;
+  }
+  .line:last-child {
+    width: 8rem;
+  }
+  #lines, #icons {
+    /* margin-bottom: 4.5rem; */
+    margin-bottom: 0;
+  }
+  #icons {
+    height: 30%;
+    gap: 2rem;
+  }
+  #icons i {
+    font-size: 2rem;
+  }
+  #icons div:has(i) {
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    /* height: 4.5rem; */
+    border: 1px solid white;
+    border-radius: 50%;
+  }
 }
-
-
 @media (max-width: 425px) {
-
-    div.line:first-child {
-        width: 1rem;
-    }
-    
-    div.line:last-child {
-        width: 6rem;
-    }
-
-    #products {
-        gap: 1.5rem;
-    }
-
-    #icons i {
-        font-size: 1.5rem;
-    }
-
-    #icons div:has(i) {
-        width: 2.5rem;
-        height: 2.5rem;
-        /* height: 4.5rem; */
-        border: 1px solid white;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #footer-container > p {
-        font-size: 1rem;
-    }
+  .line:first-child {
+    width: 1rem;
+  }
+  .line:last-child {
+    width: 6rem;
+  }
+  #products {
+    gap: 1.5rem;
+  }
+  #icons i i {
+    font-size: 1.5rem;
+  }
+  #icons i div:has(i) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  #footer-container > p {
+    font-size: 1rem;
+  }
 }
-
 @media (max-width: 375px) {
-    #icons i {
-        font-size: 1rem;
-    }
-
-    #icons div:has(i) {
-        width: 2rem;
-        height: 2rem;
-        /* height: 4.5rem; */
-        border: 1px solid white;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-    }
+  #icons i {
+    font-size: 1rem;
+  }
+  #icons div:has(i) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
