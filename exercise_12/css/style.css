@@ -1,0 +1,267 @@
+
+/* 
+    Colors
+
+    Header Background: #A9E087
+    Circle Color: #00987D
+    Triangle Color: #FFABDC
+    Square Color: #E0E0E0
+
+    Table Data First Background: #0D62D6
+    Table Data Second Background: #455D7E
+    Table Data Third Background: #3288FF
+
+*/
+
+
+/* CSS Resets */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Header Styles */
+
+header {
+    text-transform: uppercase;
+    padding: 1.5rem 1.675rem;
+    background-color: #A9E087;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.flex {
+    display: flex;
+}
+
+header .flex {
+    justify-content: space-between;
+}
+
+.btn {
+    min-width: 13.5rem;
+    height: 3.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.4rem;
+    background: none;
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: .2rem;
+    color: #fff;
+
+    margin: 5.5rem 0 12.5rem;
+    visibility: hidden;
+}
+
+#output .btn {
+    visibility: visible;
+}
+
+
+/* Main Content Styles */
+main{
+    background-color: #000;
+}
+/* Choose Shape Section styles */
+
+section {
+    background-color: #000;
+    color: #fff;
+    transition: display 1s;
+    /* animation: slideaway 200ms; */
+}
+
+@keyframes slideaway {
+    from { display: block; }
+    to { transform: translateY(50%); }
+  }
+
+section:not(section:first-child) {
+    display: none;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#choose-shape {
+    padding-top: 15rem;
+}
+
+.title {
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+
+.shape-container {
+    gap: 4.8rem;
+    margin-top: 5.75rem;
+}
+
+.circle, .triangle, .square {
+    cursor: pointer;
+}
+
+.circle {
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    background-color: #00987D;
+}
+
+.triangle {
+    background-color: #FFABDC;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+
+.triangle .right {
+    transform: rotate(26deg);
+    position: relative;
+    top: -53%;
+    left: -24%;
+    background-color: #000;
+    height: 12rem;
+    width: 5rem;
+    cursor: default;
+}
+
+.triangle .left {
+    transform: rotate(-26deg);
+    position: relative;
+    top: -175%;
+    right: -71%;
+    background-color: #000;
+    height: 12rem;
+    width: 5rem;
+    cursor: default;
+}
+
+.square {
+    background-color: #E0E0E0;
+    width: 9.5rem;
+    height: 9.5rem;
+}
+
+.check {
+    display: inline-block;
+    visibility: hidden;
+    height: 52px;
+    width: 24px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+  }
+
+.triangle > .check {
+    top: 60%;
+}
+
+/* User Input Section Styles */
+
+#user-input {
+    padding-top: 18rem;
+}
+
+#user-input .btn {
+    margin-top: 4rem;
+}
+
+#user-input input {
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+    width: 44.5rem;
+    height: 5.25rem;
+    font-size: 3rem;
+    text-align: center;
+
+    margin-top: 4rem;
+}
+
+/* Output Section Styles */
+
+#output-shape-container {
+    margin: 10.3rem 0 1.5rem 0;
+}
+
+#output .title {
+    font-weight: 500;
+}
+
+#output-shape.triangle::before {
+    content: "";
+    transform: rotate(26deg);
+    position: absolute;
+    top: -17%;
+    left: -25%;
+    background-color: #000;
+    height: 12rem;
+    width: 5rem;
+}
+
+#output-shape.triangle::after {
+    content: "";
+    transform: rotate(-26deg);
+    position: absolute;
+    top: -24%;
+    right: -20%;
+    background-color: #000;
+    height: 12rem;
+    width: 5rem;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+td {
+    padding-left: 1rem;
+    min-width: 8.5rem;
+}
+
+sup {
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+td:first-child {
+    text-transform: uppercase;
+    width: 12.6rem;
+    height: 2.8rem;
+    background-color: #0D62D6;
+}
+
+td:nth-child(2) {
+    background-color: #455D7E;
+}
+
+td:nth-child(3) {
+    background-color: #3288FF;
+}
+
+#output .btn {
+    margin-top: 4rem;
+}

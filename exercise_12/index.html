@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Kids</title>
+
+        <!-- External Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        
+        <!-- Header Content -->
+        <header>
+            <div class="flex">
+                <h2>Math Kids</h2>
+                <h2>Kids Learning App</h2>
+            </div>
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Choose Shape Section -->
+            <section id="choose-shape">
+                <div class="container flex">
+                    <h1 class="title">
+                        1. Choose a Shape
+                    </h1>
+                    <!-- Shape Container -->
+                    <div class="shape-container flex">
+                        <div data-shape="circle" class="circle">
+                            <div class="check"></div>
+                        </div>
+                        <div data-shape="triangle" class="triangle">
+                            <div class="check"></div>
+                            <div class="right"></div>
+                            <div class="left"></div>
+                        </div>
+                        <div data-shape="square" class="square">
+                            <div class="check"></div>
+                        </div>
+                    </div>
+                    <button class="btn">
+                        Next
+                    </button>
+                </div>
+            </section>
+
+            <!-- User Input Section -->
+            <section id="user-input">
+                <div class="container input-container flex">
+                    <h1 class="title">
+                    </h1>
+                    <div>
+                        <input type="text" name="side-radius" class="user-input">
+                    </div>
+                    <button class="btn">
+                        Calculate
+                    </button>
+                </div>
+            </section>
+
+            <!-- Output Section -->
+            <section id="output">
+                <div class="container flex">
+                    <div id="output-shape-container" class="flex">
+                        <div id="output-shape"></div>
+                    </div>
+                    <h1 class="title">
+                    </h1>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="btn">
+                        Start Again
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
