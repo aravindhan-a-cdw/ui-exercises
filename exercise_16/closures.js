@@ -68,6 +68,10 @@ const createAccount = (dataObj) => {
                     retries--;
                     return;
                 }
+                if(amount > accountBalance){
+                    console.log("Your account doesn't have sufficient balance to withdraw. Try a lower amount!");
+                    return;
+                }
                 console.log(`You have withdrew Rs. ${amount}`);
                 accountBalance -= amount;
                 console.log(`You have Rs. ${accountBalance} in your account! Happy banking.`);
