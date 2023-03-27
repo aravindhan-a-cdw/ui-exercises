@@ -11,6 +11,8 @@
 
         <!-- CSS Style Links -->
         <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     </head>
     <body>
 
@@ -26,7 +28,7 @@
                     <span class="username">Steffy Jerry</span>
                     <!-- UserLogo -->
                     <div class="user-image">
-                        <img src="./images/user.jpeg" alt="Image of the user">
+                        <img src="./images/user.jpeg" alt="Image of the user" />
                     </div>
                 </div>
             </div>
@@ -34,11 +36,14 @@
 
         <main>
             <div class="container flex">
-                <div id="movie-container">
+                <div class="movie-container">
                     <section>
                         <!-- Video Section -->
                         <section>
-                            <video src="https://ia800200.us.archive.org/7/items/Sintel/sintel-2048-stereo.mp4" poster="images/poster.jpeg" controls></video>
+                            <div class="video-wrapper">
+                                <video id="video" class=".video" poster="images/poster.jpeg"></video>
+                                <div class="play-btn"></div>
+                            </div>
                             <!-- <video src="https://ia800200.us.archive.org/7/items/Sintel/sintel-2048-stereo.mp4#t=10.9" poster="images/poster.jpeg" controls></video> -->
 
                             <h2 class="video-title">Sintel</h2>
@@ -48,21 +53,23 @@
                         <hr />
                         <!-- Comments Section -->
                         <section>
-                            <h3 id="comment-title">Comments</h3>
+                            <h3 class="comment-title">Comments</h3>
                             <!-- All Comments -->
-                            <div id="comments" class="flex">
+                            <div id="comments" class="flex comments">
                                 <!-- Single Comment Container -->
-                                <div class="comment-container flex">
+
+                                <!-- <div class="comment-container flex"> -->
                                     <!-- User Image Container -->
-                                    <div class="user-image">
-                                        <img src="images/reviewers/micheal.png" alt="User image">
-                                    </div>
+                                    <!-- <div class="user-image">
+                                        <img src="images/reviewers/micheal.png" alt="User image" />
+                                    </div> -->
                                     <!-- User Comment -->
-                                    <div class="comment flex">
+                                    <!-- <div class="comment flex">
                                         <h4>Micheal Scott</h4>
                                         <p>How often do people make a film where the main character kills the thing they were trying to rescue because they didn’t recognize it? Not that often. This brought tears to my eyes.</p>
                                     </div>
-                                </div>
+                                </div> -->
+
                             </div>
                         </section>
                     </section>
@@ -71,14 +78,14 @@
                 <hr />
 
                 <!-- Upcoming Projects Section -->
-                <div id="posters-container">
+                <div class="posters-container">
                     <aside>
                         <div>
                             <h3>Upcoming Projects</h3>
                             <div id="posters">
-                                <div class="poster">
+                                <!-- <div class="poster">
                                     <img src="https://ddz4ak4pa3d19.cloudfront.net/cache/56/62/5662bc2079ee7ffd491b65c29a360ac9.jpg" alt="">
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </aside>
@@ -90,19 +97,23 @@
         <footer>
             <!-- Copyright Bar -->
             <div class="container flex">
-                <div id="copyright" class="flex">
-                    &copy; <span id="copyright-text">Copyrights 2022</span>
+                <div class="flex copyright">
+                    &copy; <span class="copyright-text">Copyrights 2022</span>
                 </div>
                 <h5>Blender Movies</h5>
             </div>
         </footer>
 
-        <div id="chat-icon">
-            <img src="images/chat.png" alt="Chatbox icon">
+        <div class="chat-icon">
+            <img src="images/chat.png" alt="Chatbox icon" />
         </div>
         <!-- Sticky Bar -->
         <div id="sticky-bar">
         </div>
+
         <script type="module" src="js/script.js"></script>
+        <!-- <script type="module" src="js/poster.js"></script>
+        <script type="module" src="js/services.js"></script>
+        <script type="module" src="js/video.js"></script> -->
     </body>
 </html>

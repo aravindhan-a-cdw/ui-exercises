@@ -40,7 +40,6 @@ body {
 }
 
 
-
 /* Header Styling */
 
 header {
@@ -88,9 +87,30 @@ main {
 }
 
 /* Video Styles */
-#movie-container {
+.movie-container {
     flex: 1 1 79%;
     padding-right: 1.625rem;
+}
+
+.video-wrapper {
+    position: relative;
+    /* width: 50%; */
+}
+
+.play-btn {
+    background-image:url(../images/playbutton.png);
+    background-repeat:no-repeat;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: block;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
 }
 
 video {
@@ -116,7 +136,7 @@ video {
 
 /* Upcoming Project Styles */
 
-#posters-container {
+.posters-container {
     flex: 1 1 23.5%;
 }
 
@@ -130,14 +150,14 @@ video {
 
 /* Comment Styles */
 
-#comment-title {
+.comment-title {
     margin-top: 1.5rem;
     margin-bottom: 1.3125rem;
 }
 
 /* Comment Container Styles */
 
-#comments {
+.comments {
     flex-direction: column;
     gap: 1.5rem;
 }
@@ -156,7 +176,7 @@ video {
 }
 
 .comment-container .user-image {
-    flex: 1 0 2.75rem;
+    flex: 0 0 2.75rem;
     height: 2.75rem;
 }
 
@@ -166,7 +186,7 @@ video {
     font-weight: 300;
 }
 
-#movie-container + hr {
+.movie-container + hr {
     display: none;
 }
 
@@ -185,13 +205,22 @@ footer > .container.flex {
     align-items: center;
 }
 
-#copyright {
+.copyright {
     align-items: center;
     gap: .5rem;
 }
 
-#copyright-text {
+.copyright-text {
     font-size: .8rem;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 3.8rem;
+    right: 2.125rem;
+    justify-content: end;
+    width: 4.5rem;
+    height: 4.5rem;
 }
 
 #sticky-bar {
@@ -199,15 +228,6 @@ footer > .container.flex {
     background-color: #fff;
     position: sticky;
     bottom: 0;
-}
-
-#chat-icon {
-    position: fixed;
-    bottom: 3.5rem;
-    right: 2.125rem;
-    justify-content: end;
-    width: 4rem;
-    height: 4rem;
 }
 
 
@@ -235,26 +255,26 @@ footer > .container.flex {
         flex-wrap: wrap;
     }
 
-    #movie-container {
+    .movie-container {
         flex: 1 1 100%;
         padding-right: 0;
     }
 
     /* Comment Styles */
-    #comment-title {
+    .comment-title {
         margin-top: 1rem;
         margin-bottom: 1.375rem;
     }
 
-    #comments {
+    .comments {
         gap: 1rem;
     }
 
-    #posters-container {
+    .posters-container {
         flex: 1 1 100%;
     }
 
-    #movie-container + hr {
+    .movie-container + hr {
         width: 100%;
         display: block;
         margin: 1.375rem 0;
@@ -262,7 +282,16 @@ footer > .container.flex {
 
     /* Footer Styling */
 
-    #chat-icon {
+    footer > .container.flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+
+    .chat-icon {
         position: fixed;
         bottom: 1.5rem;
         right: 1rem;
@@ -272,8 +301,4 @@ footer > .container.flex {
         display: none;
     }
 
-
 }
-
-
-

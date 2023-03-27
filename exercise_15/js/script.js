@@ -16,9 +16,25 @@ let videoData = await getData('data/video.json');
 console.log(postersData);
 console.log(videoData)
 
+// Set Video src
+const videoElement = document.getElementById('video');
+videoElement.setAttribute('src', videoData.videoUrl);
+const playButtonElement = document.getElementsByClassName('play-btn')[0];
+const videoWrapperElement = document.getElementsByClassName('video-wrapper')[0];
 
+videoWrapperElement.addEventListener('click', () => {
+    console.log(playButtonElement.style.display);
+    if(playButtonElement.style.display == 'block' || playButtonElement.style.display == ''){
+        playButtonElement.style.display = 'none';
+        videoElement.play();
+    } else {
+        playButtonElement.style.display = 'block';
+        videoElement.pause();
+    }
+})
+
+// Add comments to the DOM
 let commentsContainer = document.getElementById("comments");
-
 let commentsFragment = document.createDocumentFragment();
 
 for(let commentObj of videoData.comments){
@@ -62,6 +78,7 @@ for(let commentObj of videoData.comments){
 
 commentsContainer.replaceChildren(commentsFragment);
 
+// Add posters data to DOM
 let posters = document.getElementById('posters')
 let posterFragment = document.createDocumentFragment();
 
