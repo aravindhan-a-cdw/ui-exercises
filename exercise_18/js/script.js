@@ -90,5 +90,18 @@ $(document).ready(function () {
     // Process video and comments
     const videoUrl = "https://mocki.io/v1/4da47fc5-bbf3-4e41-b35f-c88a584bc4b0";
     processData(videoUrl, populateVideoAndComments);
+
+    $('.play-btn').parent().click(function () {
+        console.log("Clicked");
+        const videoElement = $("#video").get(0);
+        const playBtnElement = $('.play-btn');
+        if(videoElement.paused){        
+            videoElement.play();   
+            playBtnElement.fadeOut();
+        }else{       
+            videoElement.pause();
+            playBtnElement.fadeIn();
+        }
+      });
 });
 
