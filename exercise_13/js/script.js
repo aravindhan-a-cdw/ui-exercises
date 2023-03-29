@@ -1,52 +1,63 @@
 
 import data from '../data/friends.json' assert {type: 'json'}
 
-// console.log(data)
-function getContactCardNode({first_name, last_name, email, img}) {
-    let fullName = first_name + ' ' + last_name;
+const createElement = (type, attributes = {}) => {
+    const element = document.createElement(type);
+    for (const key in attributes) {
+        element.setAttribute(key, attributes[key]);
+    }
+    return element;
+}
 
-    let nameTextNode = document.createTextNode(fullName);
-    let emailTextNode = document.createTextNode(email);
+function getContactCardNode({ first_name, last_name, email, img }) {
 
-    let nameElement = document.createElement('h4');
-    nameElement.append(nameTextNode);
-    let emailElement = document.createElement('h5');
-    emailElement.append(emailTextNode);
+    const fullName = first_name + ' ' + last_name;
 
-    let imageContainer = document.createElement('div');
-    imageContainer.setAttribute('class', 'image-container')
-    let image = document.createElement('img')
-    image.setAttribute('src', img);
-    image.setAttribute('alt', `Image of User ${fullName}`);
-    imageContainer.appendChild(image);
+    const finalDiv = createElement('div', { class: 'contact-container flex' });
 
-    let informationContainer = document.createElement('div');
-    informationContainer.setAttribute('class', 'information');
-    informationContainer.appendChild(nameElement);
-    informationContainer.appendChild(emailElement);
+    let contactContainer = createElement('div', { class: 'contact flex' });
+    finalDiv.appendChild(contactContainer);
 
-    let contactContainer = document.createElement('div')
-    contactContainer.setAttribute('class', 'contact flex');
-    contactContainer.appendChild(imageContainer);
+    let informationContainer = createElement('div', { class: 'information' });
     contactContainer.appendChild(informationContainer);
 
-    let finalDiv = document.createElement('div')
-    finalDiv.setAttribute('class', 'contact-container flex');
-    finalDiv.appendChild(contactContainer);
+    // Name element
+    let parent = document.createElement('h4');
+    let child = document.createTextNode(fullName);
+    parent.append(child);
+
+    informationContainer.append(parent);
+
+    // Email Element
+    parent = document.createElement('h5');
+    child = document.createTextNode(email);
+    parent.append(child);
+
+    informationContainer.append(parent);
+
+    parent = createElement('div', { class: 'image-container' });
+    child = createElement('img', { src: img, alt: `Image of User ${fullName}` })
+    parent.append(child);
+
+    contactContainer.append(parent);
+    contactContainer.append(informationContainer);
 
     return finalDiv;
 }
 
-let contactsContainer = document.getElementById('contacts');
-let contactsFragment = document.createDocumentFragment();
+const addCardsToDom = () => {
+    const contactsFragment = document.createDocumentFragment();
+    data.forEach(data => {
+        let contactContainer = getContactCardNode(data);
+        contactsFragment.appendChild(contactContainer);
+    })
+    document.getElementById('contacts').appendChild(contactsFragment);
+}
 
-data.forEach(data => {
-    let contactContainer = getContactCardNode(data);
-    contactsFragment.appendChild(contactContainer);
-})
+addCardsToDom();
 
-contactsContainer.replaceChildren(contactsFragment);
-// contactsContainer.appendChild(contactsFragment);
+
+
 
 
 
