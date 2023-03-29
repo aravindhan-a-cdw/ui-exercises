@@ -73,12 +73,15 @@ const formValidate = () => {
     console.log("Form is getting Validated");
     let submitForm = true;
     try {
+        // Iterate through the fields that needs to be validated
         for(const field of Object.keys(fields)){
+            // Get user input value
             const inputElement = document.getElementById(field);
             const fieldObj = fields[field];
             const inputValue = inputElement.value;
             let errorMessage = null;
-    
+            
+            // Remove existing errors
             const errorElements = inputElement.parentElement.getElementsByClassName("error");
             Array.from(errorElements).forEach(errorElement => errorElement.remove());
     
@@ -87,6 +90,7 @@ const formValidate = () => {
                 if(inputValue === ""){
                     errorMessage = `${fieldObj.name} is required`;
                 } else {
+                    // Test regex for the given user input
                     const re = new RegExp(fieldObj.regex);
                     console.log(re);
                     if(!re.test(inputValue)){
