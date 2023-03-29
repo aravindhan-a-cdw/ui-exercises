@@ -9,6 +9,17 @@ const getData = url => fetch(url)
                             return null;
                         });
 
+createElement = (type, attributes = null) => {
+    const element = document.createElement(type);
+
+    if (attributes !== null){
+        for(const key of Object.keys(attributes)) {
+            element.setAttribute(key, attributes[key]);
+        }
+    }
+    return element;
+}
+
 let postersData = await getData('data/posters.json');
 let videoData = await getData('data/video.json');
 
@@ -34,36 +45,32 @@ videoWrapperElement.addEventListener('click', () => {
 })
 
 // Add comments to the DOM
-let commentsContainer = document.getElementById("comments");
-let commentsFragment = document.createDocumentFragment();
+const commentsContainer = document.getElementById("comments");
+const commentsFragment = document.createDocumentFragment();
 
-for(let commentObj of videoData.comments){
+for(const commentObj of videoData.comments){
+
     // Comment Container Div
-    let commentContainer = document.createElement('div');
-    commentContainer.setAttribute('class', 'comment-container flex');
+    const commentContainer = createElement('div', {class: 'comment-container flex'});
 
     // User Image Div
-    let userImageContainer = document.createElement('div');
-    userImageContainer.setAttribute('class', 'user-image');
+    const userImageContainer = createElement('div', {class: 'user-image'});
 
     // User Image
-    let userImage = document.createElement('img');
-    userImage.setAttribute('src', commentObj.image);
-    userImage.setAttribute('alt', "Image of " + commentObj.name);
+    const userImage = document.createElement('img', {src: commentObj.image, alt: "Image of " + commentObj.name});
 
     // User Image Div Ready with image
     userImageContainer.appendChild(userImage);
 
     // User Comment div
-    let userComment = document.createElement('div');
-    userComment.setAttribute('class', 'comment flex');
+    const userComment = createElement('div', {class: 'comment flex'});
     
     // Username h4 element
-    let userName = document.createElement('h4');
+    const userName = document.createElement('h4');
     userName.append(commentObj.name);
 
     // User comment p element
-    let userCommentText = document.createElement('p');
+    const userCommentText = document.createElement('p');
     userCommentText.append(commentObj.comment);
 
     // User comment div ready with username and comment
@@ -79,14 +86,14 @@ for(let commentObj of videoData.comments){
 commentsContainer.replaceChildren(commentsFragment);
 
 // Add posters data to DOM
-let posters = document.getElementById('posters')
-let posterFragment = document.createDocumentFragment();
+const posters = document.getElementById('posters')
+const posterFragment = document.createDocumentFragment();
 
-for(let poster of postersData) {
-    let posterDiv = document.createElement('div');
+for(const poster of postersData) {
+    const posterDiv = document.createElement('div');
     posterDiv.setAttribute('class', 'poster');
 
-    let posterImg = document.createElement('img')
+    const posterImg = document.createElement('img')
     posterImg.setAttribute('src', poster.imageUrl);
     posterImg.setAttribute('alt', poster.title);
 
