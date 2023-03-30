@@ -113,6 +113,10 @@ h2 {
 
     justify-content: space-evenly;
     column-gap: 8rem;
+
+    & > div {
+        text-align: center;
+    }
 }
 
 /* Footer */
@@ -145,6 +149,8 @@ h2 {
         height: 3.2rem;
         border: 1px solid white;
         border-radius: 50%;
+
+        cursor: pointer;
     }
 }
 
@@ -152,8 +158,8 @@ h2 {
     gap: 2.25rem;
     margin-bottom: 6.875rem;
 
-    &.line {
-        border-bottom: 2px solid #fff;
+    & .line {
+        border-bottom: 1px solid #fff;
 
         &:first-child {
             width: 2rem;
@@ -200,13 +206,14 @@ h2 {
         flex-flow: column wrap;
         width: 90%;
         margin-bottom: 4rem;
+        gap: 1rem;
     }
 
     /* Logos Section */
 
     h2 {
-        font-size: 2rem;
-        margin-bottom: 4rem;
+        font-size: 2.3rem;
+        margin-bottom: 5rem;
     }
 
     #logo-container {
@@ -278,7 +285,7 @@ h2 {
 
 @media (max-width: 425px) {
 
-    .line {
+    #lines .line {
         &:first-child {
             width: 1rem;
         }
@@ -289,7 +296,7 @@ h2 {
     }
     
     #products {
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     #icons i {
