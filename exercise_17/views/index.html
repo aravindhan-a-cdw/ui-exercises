@@ -4,10 +4,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Locations</title>
 
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" 
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- JqueryUI -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" 
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- JqueryUI CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" 
+        integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+
     </head>
 
     <body>
-        
+        <header>
+            <!-- Company Logo -->
+            <div class="image-container">
+                <img src="../assets/images/Sirius_CDW.svg" alt="Sirius_CDW Logo">
+            </div>
+        </header>
+
+        <main>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tab-1">About Us</a></li>
+                    <li><a href="#tab-2">Solutions</a></li>
+                    <li><a href="#tab-3">Locations</a></li>
+                </ul>
+                <div id="tab-1">
+                    <p>
+                        Sirius is a national integrator of technology-based business solutions that span the enterprise, including the data center and lines of business. Built on products and services from the world's top technology companies, Sirius solutions are installed, configured and supported by our dedicated teams of highly certified experts. With the right people and the right partners, Sirius focuses on solutions that will help you manage your operations, optimize your IT, secure it all, and transform your business. We require our teams to be certified in multiple disciplines and products, so they can help you get from the high-level architecture of a solution all the way down to the technical configuration and implementation of point-products. Since its founding in 1980, Sirius has grown to be one of the largest IT solutions integrators in the U.S. Today, Sirius offers integrated, multivendor technology solutions that meet the requirements of the full range of organizations, from small businesses with fewer than 500 employees to large enterprises with thousands of employees and hundreds of locations.
+                    </p>
+                    <div>
+                        <img src="../assets/images/sirius_team.png" alt="Sirius Team">
+                    </div>
+                </div>
+                <div id="tab-2">
+                    <div id="accordion">
+                        <h3 class="capitalize">Digital Experience</h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem numquam nam officiis dolorum, accusantium itaque assumenda ullam a velit expedita fugit, amet sint repellat aperiam tenetur labore sapiente provident quae explicabo maxime eius illum nostrum deserunt! Officiis maiores esse corporis, est pariatur in qui. Blanditiis veniam odit reprehenderit dolor placeat neque illum enim maiores odio hic totam ut voluptas magni amet adipisci accusantium, quia commodi autem iure similique vel. Vero delectus odio unde quos architecto facere voluptatibus, quia fugiat repellendus sint aperiam natus, laborum, porro dolorum eos est accusamus! Numquam, optio iste ut accusantium aliquam nulla illo itaque ad modi.</p>
+                        </div>
+                        <h3 class="capitalize">Quality Assurance</h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aut eius rerum deleniti molestias, architecto sapiente fuga non debitis iure quam et nostrum! Sit, ut quo ratione consequuntur odio animi. Distinctio, quibusdam. Dolor repudiandae cum eveniet natus, ad ea. Ex in cum aliquam vel voluptates recusandae non minima eaque magnam!</p>
+                        </div>
+                        <h3 class="capitalize">Managed Services</h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aut eius rerum deleniti molestias, architecto sapiente fuga non debitis iure quam et nostrum! Sit, ut quo ratione consequuntur odio animi. Distinctio, quibusdam. Dolor repudiandae cum eveniet natus, ad ea. Ex in cum aliquam vel voluptates recusandae non minima eaque magnam!</p>
+                        </div>
+                        <h3 class="capitalize">Information Technology</h3>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est aut eius rerum deleniti molestias, architecto sapiente fuga non debitis iure quam et nostrum! Sit, ut quo ratione consequuntur odio animi. Distinctio, quibusdam. Dolor repudiandae cum eveniet natus, ad ea. Ex in cum aliquam vel voluptates recusandae non minima eaque magnam!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3">
+                    <table class="locations">
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <script src="../services/main.js"></script>
     </body>
 
 </html>

@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+    Common Styles
+*/
+body {
+  background-color: #F5F5F5;
+  font-family: sans-serif;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+/*
+    Header Styles
+*/
+.image-container {
+  height: 14rem;
+  text-align: center;
+  margin-top: -3rem;
+}
+
+.image-container > img {
+  max-height: 100%;
+}
+
+/* Main Content Styles */
+main {
+  width: 38%;
+  margin: auto;
+}
+
+/*
+    Tabs styles
+*/
+.nav-bar {
+  background: none;
+}
+
+.ui-tabs.tabs-container {
+  border: none;
+  background: none;
+}
+.ui-tabs .ui-tabs-nav.nav-bar {
+  border: none;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-tab {
+  border: none;
+  margin-left: 0.75rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.3rem 0.3rem 0 0;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-tab:first-child {
+  margin-left: 1.5rem;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-tab.ui-tabs-active {
+  background-color: #001B71;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-tab .ui-tabs-anchor {
+  color: #fff;
+  padding: 0.7rem 1.75rem;
+}
+.ui-tabs .ui-tabs-panel {
+  border-radius: 0;
+  padding: 1.875rem 1.625rem 1.625rem;
+  background-color: #fff;
+  box-shadow: #ECECEC 0px 0px 2px 2px;
+}
+.ui-tabs .ui-tabs-panel p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-family: sans-serif;
+  line-height: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.ui-tabs .ui-tabs-panel div > img {
+  height: 100%;
+}
+
+/*
+    Accordion Styles
+*/
+.ui-accordion .ui-accordion-header {
+  background-color: #818EB9;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.6rem;
+}
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/images/ui-icons_ffffff_256x240.png");
+  transform: scale(0.7);
+}
+.ui-accordion .ui-accordion-content {
+  border-radius: 0;
+  height: 100%;
+  padding: 1rem;
+}
+.ui-accordion .ui-accordion-content p {
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+#tab-3 table.locations {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
+  width: 100%;
+  border-spacing: 0 0;
+}
+#tab-3 table.locations tbody {
+  width: 100%;
+}
+#tab-3 table.locations tbody tr:nth-child(odd) {
+  background-color: #EEE;
+}
+#tab-3 table.locations tbody tr:nth-child(even) {
+  background-color: #F2D9F7;
+}
+#tab-3 table.locations tbody tr td {
+  text-align: left;
+  padding: 0.25rem 1rem;
+  border-bottom: 10px solid #fff;
+}
+#tab-3 table.locations tbody tr td:last-child {
+  text-align: right;
+}
+#tab-3 table.locations tbody tr td img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
