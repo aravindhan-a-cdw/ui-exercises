@@ -50,12 +50,12 @@ body {
 header {
     position: sticky;
     top: 0;
+    z-index: 1;
     background-color: #fff;
     box-shadow: 0px 3px 5px #D9D9D9;
 }
 
 .header-container {
-    /* height: 3.875rem; */
     padding: 1.2rem 0;
     justify-content: space-between;
 }

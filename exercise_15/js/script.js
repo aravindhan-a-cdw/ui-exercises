@@ -9,7 +9,7 @@ const getData = url => fetch(url)
                             return null;
                         });
 
-createElement = (type, attributes = null) => {
+const createElement = (type, attributes = null) => {
     const element = document.createElement(type);
 
     if (attributes !== null){
@@ -22,10 +22,6 @@ createElement = (type, attributes = null) => {
 
 let postersData = await getData('data/posters.json');
 let videoData = await getData('data/video.json');
-
-
-console.log(postersData);
-console.log(videoData)
 
 // Set Video src
 const videoElement = document.getElementById('video');
