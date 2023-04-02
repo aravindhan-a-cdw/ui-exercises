@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pocket Notes</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- External Links -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- CSS Style Links -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+    </head>
+
+    <body>
+        <!-- Header Content -->
+        <header>
+            <!-- Logo/Title -->
+            <h3 class="main-title">Pocket <span class="bold-text">Notes</span></h3>
+            <!-- User Action Buttons -->
+            <div class="user-actions">
+                <button class="btn secondary-btn capitalize" onclick="deleteAllHandler()">Delete All</button>
+                <button class="btn primary-btn capitalize" onclick="newNoteHandler()">New</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Modal -->
+            <div class="modal display-none">
+                <form onsubmit="return addNewNoteHandler(this);">
+                    <div class="side-modal">
+                        <div class="modal-header">
+                            <h3 class="capitalize">New Note</h3>
+                            <button onclick="closeModalHandler()">X</button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" name="notes-title" placeholder="Notes Title" />
+                            <input type="text" name="image-url" placeholder="Add Image URL" />
+                            <textarea name="content" placeholder="Add Content Here"></textarea>
+    
+                            <div class="color-picker"></div>
+    
+                        </div>
+                        <div class="modal-footer">
+                            <div class="color-selector">
+                            </div>
+                            <button class="btn primary-btn capitalize" onclick="">ADD</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Cards -->
+            <div class="cards">
+                <!-- Placeholder Starts -->
+                <!-- <div class="card">
+                    <span class="card-title">Summer Time - A Long Short Story</span>
+                    <span class="card-date">Mar 11, 2022</span>
+                    <div class="card-image">
+                        <img src="/summer.jpeg" alt="Card Image">
+                    </div>
+                    <p class="card-content">Most of us have, at some point, considered what we would do if we travel back in time. Maybe we would give </p>
+                </div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div> -->
+                <!-- Placeholder Ends -->
+            </div>
+
+            <button class="btn primary-btn capitalize load-btn">Load More</button>
+        </main>
+        
+        <script src="../services/main.js"></script>
+    </body>
+</html>
+

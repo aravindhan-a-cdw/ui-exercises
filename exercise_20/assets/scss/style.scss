@@ -1,0 +1,341 @@
+
+/*
+    Colors
+    Theme-Color-1: #041D2E
+    Theme-Color-2: #000000
+
+    Text Color: #fff
+    Text Color Dark: #6B6B6B
+
+    Button Color: #B355B7
+    Danger Button Color: #A80000
+
+    BG1: #EBCCED
+    BG2: #FCFCFC
+    BG3: #FFCA71
+    BG4: #E5EE91
+    BG5: #FFA78C
+
+*/
+
+
+/*
+    CSS Resets
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --theme-color-1: #041D2E;
+    --theme-color-2: #000;
+    --font-white: #fff;
+    --font-grey: #6B6B6B;
+}
+
+/*
+    Common Styles
+*/
+.capitalize {
+    text-transform: uppercase;
+}
+
+.bold-text {
+    font-weight: 400;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+%flex-container {
+    display: flex;
+}
+
+%header-background {
+    background-color: var(--theme-color-1);
+    color: var(--font-white);
+}
+
+%body-background {
+    background-color: var(--theme-color-2);
+    color: var(--font-white);
+}
+
+%font-white {
+    color: #fff;
+}
+
+%font-grey {
+    color: var(--font-grey);
+}
+
+%font-black {
+    color: #000;
+}
+
+%btn-border-radius {
+    border-radius: 1.5rem;
+}
+
+%btn-basic-padding {
+    padding: .75rem 2.25rem;
+}
+
+%no-border-background {
+    background: none;
+    border: none;
+}
+
+.primary-btn {
+    @extend %font-white, %btn-border-radius;
+
+    background-color: #B355B7;
+}
+
+.secondary-btn {
+    @extend %font-white, %btn-border-radius;
+
+    background-color: #A80000;
+}
+
+.overflow-hidden {
+    overflow: hidden
+}
+
+.display-none {
+    display: none
+}
+
+.display-block {
+    display: block;
+}
+
+/*
+    Header Styles
+*/
+
+header {
+    @extend %flex-container, %header-background;
+
+    justify-content: space-between;
+    padding: 1.5rem 2.25rem;
+    position: sticky;
+
+    & h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    & button {
+        @extend %btn-basic-padding;
+
+        font-size: 1rem;
+        letter-spacing: 1px;
+
+        &:first-child {
+            margin-right: 1rem;
+        }
+    }
+}
+
+/*
+    Main Styles
+*/
+
+main {
+    @extend %body-background;
+
+    padding-top: 2.8125rem;
+    text-align: center;
+    
+    & > .cards {
+        @extend %flex-container;
+
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        & .card {
+            flex: 0 0 23%;
+            height: 26rem;
+            background-color: #FCFCFC;
+            border-radius: .25rem;
+            cursor: pointer;
+        }
+
+    }
+
+    & > button.load-btn {
+        font-size: 1.1rem;
+        padding: 1.25rem 2.25rem;
+        border-radius: 2rem;
+        margin: 2.25rem 0;
+    }
+}
+
+.modal {
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+        background-color: rgba($color: #021420, $alpha: .6);
+    }
+
+    & .side-modal {
+        @extend %body-background, %flex-container;
+    
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 37.5rem;
+        height: 100%;
+
+        flex-direction: column;
+
+        & .modal-header {
+            @extend %header-background, %flex-container;
+
+            margin: 2.625rem;
+            padding: 1rem 1.125rem;
+            justify-content: space-between;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            border-radius: .25rem;
+
+            & button {
+                @extend %font-grey;
+                background: none;
+                border: none;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+        }
+
+        & .modal-body {
+            @extend %flex-container;
+
+            flex-direction: column;
+            padding: 0 2.625rem;
+            height: 100%;
+
+            & input {
+                @extend %no-border-background, %font-white;
+
+                font-size: 1rem;
+                margin-bottom: 1.625rem;
+                padding: .5rem .5rem;
+
+                &[name=notes-title]{
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            & textarea {
+                @extend %no-border-background, %font-white;
+                flex: 1 1 100%;
+                font-size: 1rem;
+                padding: .5rem .5rem;
+                resize: none;
+                font-family: inherit;
+            }
+        }
+
+        & .modal-footer {
+            @extend %flex-container;
+
+            justify-content: space-between;
+            margin: 1.875rem 2.75rem;
+            
+            & button {
+                font-size: 1rem;
+                padding: 0rem 2.5rem;
+            }
+        }
+    }
+}
+
+.color {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #EBCCED;
+    margin-right: .75rem;
+}
+
+.selected {
+    position: relative;
+}
+
+.selected::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    width: .6rem;
+    height: 1.4rem;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.card {
+    @extend %flex-container, %font-black;
+    flex-direction: column;
+    text-align: left;
+    padding: 1.5rem 1.5rem;
+    gap: .8rem;
+
+    & .card-title {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    & .card-date {
+        font-size: .8rem;
+    }
+
+    & .card-image {
+        margin: 0 auto;
+        // background: url(/summer.jpeg) center center;
+        
+        & img {
+            border-radius: 1rem;
+            aspect-ratio: 5/3;
+            width: 100%;
+        }
+    }
+
+    & .card-content {
+        flex: 1 0 20%;
+        font-size: .95rem;
+        font-weight: 300;
+        line-height: 1.3rem;
+        word-spacing: 1px;
+        overflow: hidden;
+    }
+}
+
+

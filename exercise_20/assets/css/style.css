@@ -1,0 +1,284 @@
+/*
+    Colors
+    Theme-Color-1: #041D2E
+    Theme-Color-2: #000000
+
+    Text Color: #fff
+    Text Color Dark: #6B6B6B
+
+    Button Color: #B355B7
+    Danger Button Color: #A80000
+
+    BG1: #EBCCED
+    BG2: #FCFCFC
+    BG3: #FFCA71
+    BG4: #E5EE91
+    BG5: #FFA78C
+
+*/
+/*
+    CSS Resets
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --theme-color-1: #041D2E;
+  --theme-color-2: #000;
+  --font-white: #fff;
+  --font-grey: #6B6B6B;
+}
+
+/*
+    Common Styles
+*/
+.capitalize {
+  text-transform: uppercase;
+}
+
+.bold-text {
+  font-weight: 400;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card, .modal .side-modal .modal-footer, .modal .side-modal .modal-body, .modal .side-modal .modal-header, .modal .side-modal, main > .cards, header {
+  display: flex;
+}
+
+.modal .side-modal .modal-header, header {
+  background-color: var(--theme-color-1);
+  color: var(--font-white);
+}
+
+.modal .side-modal, main {
+  background-color: var(--theme-color-2);
+  color: var(--font-white);
+}
+
+.modal .side-modal .modal-body textarea, .modal .side-modal .modal-body input, .secondary-btn, .primary-btn {
+  color: #fff;
+}
+
+.modal .side-modal .modal-header button {
+  color: var(--font-grey);
+}
+
+.card {
+  color: #000;
+}
+
+.secondary-btn, .primary-btn {
+  border-radius: 1.5rem;
+}
+
+header button {
+  padding: 0.75rem 2.25rem;
+}
+
+.modal .side-modal .modal-body textarea, .modal .side-modal .modal-body input {
+  background: none;
+  border: none;
+}
+
+.primary-btn {
+  background-color: #B355B7;
+}
+
+.secondary-btn {
+  background-color: #A80000;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+/*
+    Header Styles
+*/
+header {
+  justify-content: space-between;
+  padding: 1.5rem 2.25rem;
+  position: sticky;
+}
+header h3 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+header button {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+header button:first-child {
+  margin-right: 1rem;
+}
+
+/*
+    Main Styles
+*/
+main {
+  padding-top: 2.8125rem;
+  text-align: center;
+}
+main > .cards {
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+main > .cards .card {
+  flex: 0 0 23%;
+  height: 26rem;
+  background-color: #FCFCFC;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+main > button.load-btn {
+  font-size: 1.1rem;
+  padding: 1.25rem 2.25rem;
+  border-radius: 2rem;
+  margin: 2.25rem 0;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(2, 20, 32, 0.6);
+}
+.modal .side-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 37.5rem;
+  height: 100%;
+  flex-direction: column;
+}
+.modal .side-modal .modal-header {
+  margin: 2.625rem;
+  padding: 1rem 1.125rem;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 0.25rem;
+}
+.modal .side-modal .modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.modal .side-modal .modal-body {
+  flex-direction: column;
+  padding: 0 2.625rem;
+  height: 100%;
+}
+.modal .side-modal .modal-body input {
+  font-size: 1rem;
+  margin-bottom: 1.625rem;
+  padding: 0.5rem 0.5rem;
+}
+.modal .side-modal .modal-body input[name=notes-title] {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.modal .side-modal .modal-body textarea {
+  flex: 1 1 100%;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  resize: none;
+  font-family: inherit;
+}
+.modal .side-modal .modal-footer {
+  justify-content: space-between;
+  margin: 1.875rem 2.75rem;
+}
+.modal .side-modal .modal-footer button {
+  font-size: 1rem;
+  padding: 0rem 2.5rem;
+}
+
+.color {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #EBCCED;
+  margin-right: 0.75rem;
+}
+
+.selected {
+  position: relative;
+}
+
+.selected::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  width: 0.6rem;
+  height: 1.4rem;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.card {
+  flex-direction: column;
+  text-align: left;
+  padding: 1.5rem 1.5rem;
+  gap: 0.8rem;
+}
+.card .card-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.card .card-date {
+  font-size: 0.8rem;
+}
+.card .card-image {
+  margin: 0 auto;
+}
+.card .card-image img {
+  border-radius: 1rem;
+  aspect-ratio: 5/3;
+  width: 100%;
+}
+.card .card-content {
+  flex: 1 0 20%;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.3rem;
+  word-spacing: 1px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
