@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Little Book</title>
+
+        <!-- External Links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+
+        <!-- Internal Links -->
+        <link rel="stylesheet" href="/ui_test/assets/css/style.css">
+
+    </head>
+    <body>
+        <div class="body-container light-theme">
+            <aside>
+                <h2><span class="pink">Little</span> Book</h2>
+                <div class="filter-container">
+                    <h4 class="uppercase">Filter</h4>
+                    <div class="flex-container">
+                        <input type="checkbox" name="filter" id="regional" value="regional" checked>
+                        <label for="regional">Regional Blogs</label>
+                    </div>
+                    <div class="flex-container">
+                        <input type="checkbox" name="filter" id="national" value="national" checked>
+                        <label for="national">National Blogs</label>
+                    </div>
+                    <div class="flex-container">
+                        <input type="checkbox" name="filter" id="international" value="international" checked>
+                        <label for="international">International Blogs</label>
+                    </div>
+                </div>
+                <div class="user-options">
+                    <a href="#members">View Members</a>
+                    <a href="#">Switch to Dark Mode</a>
+                </div>
+            </aside>
+    
+            <main>
+                <div class="blogs-header">
+                    <input type="search" name="search" id="blog-search" placeholder="Search Blogs">
+                    <button class="btn uppercase">New</button>
+                </div>
+                <div id="blog-cards" class="blogs-container">
+                    <!-- <div class="blog-card">
+                        <span class="card-title">How to Travel Time</span>
+                        <span class="card-type uppercase">International</span>
+                        <span class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, nihil fugiat consequatur laboriosam voluptate iste quasi labore aliquid provident unde tenetur repudiandae eaque error itaque iure, cumque quam commodi asperiores id dolorum explicabo autem. Laudantium a porro fugiat molestiae sed laborum nostrum quasi est voluptatem, consequatur officia tempore commodi ex.</span>
+                    </div> -->
+                </div>
+            </main>
+    
+            <section>
+                <div id="blog-container" class="blog-container">
+                    <div class="blog-image">
+                        <img src="/summer.jpeg" alt="">
+                    </div>
+                    <h3 class="blog-title">Summer Time - A Long Tale</h3>
+                    <p class="blog-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis a velit fugiat illum repellat accusamus eveniet molestiae, quod perspiciatis, provident nobis quo hic molestias voluptatem itaque doloribus neque laudantium earum. Repellendus fuga maiores nihil dignissimos tempore. Minima iusto ipsum repudiandae atque pariatur, omnis cupiditate voluptatum, explicabo aliquid porro quaerat. Cum optio minus autem praesentium, alias, enim assumenda ullam ratione, quam amet recusandae laudantium eligendi inventore magnam architecto nam provident omnis molestias! Fugiat repellat molestias facere officia ratione incidunt, saepe alias excepturi accusamus suscipit eum ipsam vitae fuga at unde corrupti laudantium nesciunt nemo recusandae nulla omnis deserunt id doloribus. Vero deleniti consequatur exercitationem. Aliquid exercitationem quia blanditiis. Optio repudiandae provident ullam officia minus modi, vero odio reprehenderit inventore incidunt ducimus?</p>
+                    <div class="button-container">
+                        <button class="btn btn-edit uppercase">Edit Content</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="/ui_test/services/main.js"></script>
+    </body>
+</html>

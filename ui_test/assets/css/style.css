@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html, body {
+  height: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+:root {
+  --pink: #B355B7;
+  --text-white: #fff;
+  --text-black: #111;
+  --btn-primary: var(--pink);
+  --btn-secondary: #69F8F8;
+}
+
+.light-theme {
+  --bg-primary: #fff;
+  --bg-secondary: #F5F6FA;
+  --text-primary: var(--text-black);
+  --text-secondary: var(--pink);
+  --search-bg: #EBECF4;
+}
+
+.body-container, aside, main, section {
+  height: 100%;
+}
+
+.body-container, aside, main, section {
+  display: flex;
+}
+
+section, main {
+  overflow: scroll;
+}
+
+.blog-container > .blog-title, .blog-card .card-title, aside h2 {
+  font-family: "Roboto Slab", serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+aside {
+  flex: 0 0 16%;
+  flex-direction: column;
+  padding: 0 2.75rem;
+}
+aside h2 {
+  margin: 2.75rem 0 23rem 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+aside h2 > span {
+  font-weight: 400;
+  color: var(--pink);
+}
+
+main {
+  flex: 0 0 33%;
+  flex-direction: column;
+  background-color: var(--bg-secondary);
+}
+
+section {
+  flex-direction: column;
+}
+
+.filter-container {
+  margin-bottom: 18.4rem;
+}
+.filter-container h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.filter-container > div {
+  align-items: center;
+  margin-top: 0.75rem;
+  gap: 0.8rem;
+}
+.filter-container > div > input[type=checkbox] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  content: none;
+}
+.filter-container > div > input[type=checkbox]:before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  font-size: 10px;
+  color: transparent;
+  background: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--pink);
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.filter-container > div > input[type=checkbox]:checked:before {
+  color: white;
+  background-color: var(--pink);
+}
+.filter-container > div > label {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.user-options {
+  margin-bottom: 5.3rem;
+}
+.user-options a {
+  display: block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+.blogs-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.blogs-header > input[type=search] {
+  flex: 0 1 70%;
+  border: none;
+  background-color: var(--search-bg);
+  height: 3rem;
+  border-radius: 2.5rem;
+  padding-left: 2rem;
+  font-family: inherit;
+}
+.blogs-header > button {
+  flex: 0 1 30%;
+  background-color: var(--pink);
+  border-radius: 2.5rem;
+  color: var(--text-white);
+  font-size: 1.1rem;
+}
+
+.blog-card {
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  box-shadow: #E8E8EC 0px 0px 4px 2px;
+  background-color: var(--bg-primary);
+  border-radius: 1rem;
+}
+.blog-card.selected {
+  background-color: #96E2F4;
+}
+.blog-card .card-title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.blog-card .card-type {
+  font-size: 0.8rem;
+  color: var(--pink);
+}
+.blog-card .card-content {
+  display: -webkit-box;
+  height: 4.2rem; /* Fallback for non-webkit */
+  font-size: 1rem;
+  line-height: 1.4;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+}
+
+.blog-container {
+  padding: 3rem 3.5rem;
+}
+.blog-container > .blog-image {
+  height: 27.125rem;
+  margin-bottom: 2rem;
+}
+.blog-container > .blog-image img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.blog-container > .blog-title {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.blog-container > .blog-content {
+  font-family: inherit;
+  line-height: 1.75rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+.blog-container .button-container {
+  text-align: right;
+}
+.blog-container .btn-edit {
+  background-color: var(--btn-secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 1.5rem;
+  font-size: 0.8rem;
+  justify-self: end;
+}
+
+/*# sourceMappingURL=style.css.map */
